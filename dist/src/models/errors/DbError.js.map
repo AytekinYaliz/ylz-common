@@ -1,0 +1,1 @@
+{"version":3,"file":"DbError.js","sourceRoot":"","sources":["../../../../src/models/errors/DbError.ts"],"names":[],"mappings":";;AACA,2CAAwC;AACxC,oDAAsD;AAEtD,MAAa,OAAQ,SAAQ,qBAAS;IACpC;;;;;OAKG;IACH,YAAY,OAAe,EAAE,OAAiB,EAAE,EAAE,OAAe,OAAO,CAAC,IAAI;QAC3E,KAAK,CAAC,OAAO,EAAE,0BAAc,CAAC,qBAAqB,EAAE,IAAI,EAAE,IAAI,EAAE,KAAK,CAAC,CAAC;IAC1E,CAAC;CACF;AAVD,0BAUC"}

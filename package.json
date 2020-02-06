@@ -1,0 +1,29 @@
+{
+  "name": "@ylz/common",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "precommit": "npm run build",
+    "prebuild": "npm run remove-dist",
+    "build": "tsc",
+    "remove-dist": "rm -rf ./dist",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint:fix": "yarn lint -- --fix",
+    "pretest": "rm -rf ./testDir",
+    "test": "cross-env NODE_ENV=test jest --forceExit --runInBand",
+    "test:c": "npm run test -- --coverage",
+    "test:w": "npm run test -- --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "cross-env": "5.2.0",
+    "tslint": "5.10.0",
+    "typescript": "3.7.2"
+  }
+}
