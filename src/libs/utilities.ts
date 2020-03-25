@@ -84,35 +84,35 @@ if (!Array.prototype.mapSync) {
  * Complexity is O(N).
  */
 // @ts-ignore
-if (!Array.prototype.pipe) {
-  // @ts-ignore
-  Array.prototype.pipe = function(...callbacks /*, thisArg*/) {
-    if (this == null) {
-      throw new TypeError("'this' is null or not defined!!");
-    }
-    for (const cb of callbacks) {
-      if (typeof cb !== "function") {
-        throw new TypeError(cb + " is not a function!!");
-      }
-    }
+// if (!Array.prototype.pipe) {
+//   // @ts-ignore
+//   Array.prototype.pipe = function(...callbacks /*, thisArg*/) {
+//     if (this == null) {
+//       throw new TypeError("'this' is null or not defined!!");
+//     }
+//     for (const cb of callbacks) {
+//       if (typeof cb !== "function") {
+//         throw new TypeError(cb + " is not a function!!");
+//       }
+//     }
 
-    const result = [];
-    for (const item of this) {
-      const list = [...callbacks];
+//     const result = [];
+//     for (const item of this) {
+//       const list = [...callbacks];
 
-      let isEval = true;
-      while (list.length > 0 && isEval) {
-        isEval = list.shift()(item);
-      }
+//       let isEval = true;
+//       while (list.length > 0 && isEval) {
+//         isEval = list.shift()(item);
+//       }
 
-      if (isEval) {
-        result.push(item);
-      }
-    }
+//       if (isEval) {
+//         result.push(item);
+//       }
+//     }
 
-    return result;
-  };
-}
+//     return result;
+//   };
+// }
 
 /**
  * Returns true if existing entity has the specified id.
