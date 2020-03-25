@@ -131,6 +131,7 @@ export declare function trimRight(str: string, charlist: string): string;
  * @param charlist A string value to be trimmed.
  */
 export declare function trim(str: string, charlist: string): string;
+export declare function clone(obj: any): any;
 interface ISlice {
     skip?: number;
     limit?: number;

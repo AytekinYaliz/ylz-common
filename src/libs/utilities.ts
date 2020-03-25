@@ -396,6 +396,10 @@ export function trim(str: string, charlist: string) {
   return trimLeft(trimRight(str, charlist), charlist);
 }
 
+export function clone(obj: any) {
+  return JSON.parse(JSON.stringify(obj));
+}
+
 interface ISlice {
   skip?: number;
   limit?: number;

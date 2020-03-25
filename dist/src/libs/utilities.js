@@ -393,6 +393,10 @@ function trim(str, charlist) {
     return trimLeft(trimRight(str, charlist), charlist);
 }
 exports.trim = trim;
+function clone(obj) {
+    return JSON.parse(JSON.stringify(obj));
+}
+exports.clone = clone;
 function sliceData(data, { limit = 1000, skip = 0 }) {
     return limit === -1 ? data.slice(skip) : data.slice(skip, skip + limit);
 }
