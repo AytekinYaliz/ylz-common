@@ -79,40 +79,40 @@ if (!Array.prototype.mapSync) {
 /**
  * Polyfill functions. Needs to be called when app is loaded.
  * const utilities = require("./libs/utilities");
- * Called as: const arr2 = arr.pipe(func1, func2, func3);
+ * Called as: const arr2 = arr.pipes(func1, func2, func3, ...);
  * All func parameters are predicates (boolean return functions).
  * Complexity is O(N).
  */
 // @ts-ignore
-// if (!Array.prototype.pipe) {
-//   // @ts-ignore
-//   Array.prototype.pipe = function(...callbacks /*, thisArg*/) {
-//     if (this == null) {
-//       throw new TypeError("'this' is null or not defined!!");
-//     }
-//     for (const cb of callbacks) {
-//       if (typeof cb !== "function") {
-//         throw new TypeError(cb + " is not a function!!");
-//       }
-//     }
+if (!Array.prototype.pipes) {
+  // @ts-ignore
+  Array.prototype.pipes = function(...callbacks /*, thisArg*/) {
+    if (this == null) {
+      throw new TypeError("'this' is null or not defined!!");
+    }
+    for (const cb of callbacks) {
+      if (typeof cb !== "function") {
+        throw new TypeError(cb + " is not a function!!");
+      }
+    }
 
-//     const result = [];
-//     for (const item of this) {
-//       const list = [...callbacks];
+    const result = [];
+    for (const item of this) {
+      const list = [...callbacks];
 
-//       let isEval = true;
-//       while (list.length > 0 && isEval) {
-//         isEval = list.shift()(item);
-//       }
+      let isEval = true;
+      while (list.length > 0 && isEval) {
+        isEval = list.shift()(item);
+      }
 
-//       if (isEval) {
-//         result.push(item);
-//       }
-//     }
+      if (isEval) {
+        result.push(item);
+      }
+    }
 
-//     return result;
-//   };
-// }
+    return result;
+  };
+}
 
 /**
  * Returns true if existing entity has the specified id.

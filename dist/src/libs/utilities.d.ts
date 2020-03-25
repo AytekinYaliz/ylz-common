@@ -14,13 +14,6 @@ export declare function forEachSync(arr: any[], func: Function): Promise<void>;
  */
 export declare function mapSync(arr: any[], func: Function): Promise<any[]>;
 /**
- * Polyfill functions. Needs to be called when app is loaded.
- * const utilities = require("./libs/utilities");
- * Called as: const arr2 = arr.pipe(func1, func2, func3);
- * All func parameters are predicates (boolean return functions).
- * Complexity is O(N).
- */
-/**
  * Returns true if existing entity has the specified id.
  * @param id 'id' to test.
  * @returns A Function that takes the object to test
