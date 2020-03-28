@@ -319,10 +319,8 @@ export function compare(a: string | number, b: string | number) {
   return a === b ? 0 : a < b ? -1 : 1;
 }
 
-export function getUniqueElements(items): any[] {
-  const uniqueSet = new Set();
-  items.forEach(item => uniqueSet.add(item));
-  return Array.from(uniqueSet.values());
+export function getUniqueElements(items: any[]): any[] {
+  return Array.from(new Set(items));
 }
 
 /**
