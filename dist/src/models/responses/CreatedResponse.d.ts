@@ -1,6 +1,10 @@
-import { IData, IMetadata, IResponse } from "./IResponse";
+import { IData, ICode, IMessage, ITimestamp, IResponse } from "./IResponse";
+import { IError } from "../errors";
 export declare class CreatedResponse implements IResponse {
     data: IData;
-    metadata: IMetadata;
-    constructor(data?: IData, metadata?: IMetadata);
+    errors: IError;
+    code: ICode;
+    message: IMessage;
+    timestamp: ITimestamp;
+    constructor(data?: IData, errors?: IError, code?: ICode, message?: IMessage, timestamp?: ITimestamp);
 }

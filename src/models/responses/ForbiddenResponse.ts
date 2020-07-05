@@ -1,17 +1,20 @@
-import { IData, IMetadata, IResponse } from "./IResponse";
+import { IData, ICode, IMessage, ITimestamp, IResponse } from "./IResponse";
 import { HttpStatusCode } from "../../libs/constants";
 import { getEnumKey } from "../../libs/utilities";
+import { IError } from "../errors";
 
 export class ForbiddenResponse implements IResponse {
   public data: IData;
-  public metadata: IMetadata;
+  public code: ICode;
+  public message: IMessage;
+  public timestamp: ITimestamp;
+  public errors: IError;
 
-  constructor(message: string = getEnumKey(HttpStatusCode, HttpStatusCode.FORBIDDEN)) {
-    this.data = null;
-    this.metadata = {
-      code: HttpStatusCode.FORBIDDEN,
-      message,
-      timestamp: new Date()
-    };
+  constructor(data: IData = null, errors: IError = null, message: string = getEnumKey(HttpStatusCode, HttpStatusCode.FORBIDDEN)) {
+    this.data = data;
+    this.code = HttpStatusCode.FORBIDDEN;
+    this.message = message;
+    this.errors = errors;
+    this.timestamp = new Date();
   }
 }

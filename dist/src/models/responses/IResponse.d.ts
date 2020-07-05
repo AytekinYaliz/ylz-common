@@ -1,7 +1,12 @@
 export declare type IData = any | any[] | null;
+export declare type ICode = number;
+export declare type IMessage = string;
+export declare type ITimestamp = Date;
 export interface IResponse {
     data: IData;
-    metadata: IMetadata;
+    code: ICode;
+    message: IMessage;
+    timestamp: ITimestamp;
 }
 export interface IMetadata {
     code: number;

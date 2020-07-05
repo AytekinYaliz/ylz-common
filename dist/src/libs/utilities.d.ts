@@ -99,7 +99,7 @@ export declare function sort(data: any[], sortBy?: string, isAsc?: boolean): any
  * @returns -1, 0 or 1
  */
 export declare function compare(a: string | number, b: string | number): 1 | 0 | -1;
-export declare function getUniqueElements(items: any): any[];
+export declare function getUniqueElements(items: any[]): any[];
 /**
  * Converts array of objects to Object
  * @param array array of object

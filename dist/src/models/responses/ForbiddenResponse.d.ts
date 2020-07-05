@@ -1,6 +1,10 @@
-import { IData, IMetadata, IResponse } from "./IResponse";
+import { IData, ICode, IMessage, ITimestamp, IResponse } from "./IResponse";
+import { IError } from "../errors";
 export declare class ForbiddenResponse implements IResponse {
     data: IData;
-    metadata: IMetadata;
-    constructor(message?: string);
+    code: ICode;
+    message: IMessage;
+    timestamp: ITimestamp;
+    errors: IError;
+    constructor(data?: IData, errors?: IError, message?: string);
 }

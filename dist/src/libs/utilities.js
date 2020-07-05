@@ -316,9 +316,7 @@ function compare(a, b) {
 }
 exports.compare = compare;
 function getUniqueElements(items) {
-    const uniqueSet = new Set();
-    items.forEach(item => uniqueSet.add(item));
-    return Array.from(uniqueSet.values());
+    return Array.from(new Set(items));
 }
 exports.getUniqueElements = getUniqueElements;
 /**
