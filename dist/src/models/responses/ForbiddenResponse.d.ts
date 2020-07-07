@@ -1,5 +1,4 @@
-import { IData, ICode, IMessage, ITimestamp, IResponse } from "./IResponse";
-import { IError } from "../errors";
+import { IData, ICode, IMessage, ITimestamp, IError, IResponse } from "./IResponse";
 export declare class ForbiddenResponse implements IResponse {
     data: IData;
     code: ICode;

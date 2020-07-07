@@ -1,7 +1,6 @@
-import { IData, ICode, IMessage, ITimestamp, IResponse } from "./IResponse";
+import { IData, ICode, IMessage, ITimestamp, IError, IResponse } from "./IResponse";
 import { HttpStatusCode } from "../../libs/constants";
 import { getEnumKey } from "../../libs/utilities";
-import { IError } from "../errors";
 
 export class ForbiddenResponse implements IResponse {
   public data: IData;

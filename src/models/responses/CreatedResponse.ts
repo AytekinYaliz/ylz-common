@@ -1,6 +1,5 @@
-import { IData, ICode, IMessage, ITimestamp, IResponse } from "./IResponse";
+import { IData, ICode, IMessage, ITimestamp, IError, IResponse } from "./IResponse";
 import { HttpStatusCode } from "../../libs/constants";
-import { IError } from "../errors";
 
 export class CreatedResponse implements IResponse {
   constructor(
