@@ -1,4 +1,4 @@
-export { IResponse, IMetadata } from "./IResponse";
+export { IResponse } from "./IResponse";
 
 export { BadRequestResponse } from "./BadRequestResponse";
 export { CreatedResponse } from "./CreatedResponse";
