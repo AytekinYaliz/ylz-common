@@ -6,15 +6,9 @@ export type ITimestamp = Date;
 export interface IResponse {
   data: IData;
   code: ICode;
-  errors: IError;
+  errors: IError | IError[] | null;
   message: IMessage;
   timestamp: ITimestamp;
-}
-
-export interface IMetadata {
-  code: number;
-  message: string;
-  timestamp: Date;
 }
 
 export interface IError {
