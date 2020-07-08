@@ -1,9 +1,10 @@
 import { IData, ICode, IMessage, ITimestamp, IError, IResponse } from "./IResponse";
+import { Nullable } from "src/libs/customTypes";
 export declare class OkResponse implements IResponse {
     data: IData;
     code: ICode;
     message: IMessage;
     timestamp: ITimestamp;
-    errors: IError;
-    constructor(data?: IData, errors?: IError, message?: string);
+    errors: Nullable<IError[]>;
+    constructor(data?: IData, errors?: Nullable<IError[]>, message?: string);
 }
