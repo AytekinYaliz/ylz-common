@@ -8,11 +8,4 @@ import * as validations from "./src/libs/validations";
 import * as errors from "./src/models/errors";
 import * as responses from "./src/models/responses";
 
-export {
-  constants, //
-  customTypes,
-  errors,
-  responses,
-  utilities,
-  validations
-};
+export { constants, customTypes, errors, responses, utilities, validations };
